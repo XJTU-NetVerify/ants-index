@@ -13,6 +13,7 @@ for (let i = 0; i < 3; i++) {
     balls[i].style.top = `${pos[i][1]}vh`;
 }
 function animation(time) {
+    bgContainer.style.transform = `translateY(-${perspectiveFactor * window.scrollY}px)`;
     for (let i = 0; i < 3; i++) {
         const x = A[i] * Math.cos(2 * Math.PI * time / T[i] + phi[i]);
         const y = A[i] * Math.sin(2 * Math.PI * time / T[i] + phi[i]);
@@ -20,8 +21,5 @@ function animation(time) {
     }
     requestAnimationFrame(animation);
 }
-requestAnimationFrame(animation)
 
-window.onscroll = () => {
-    bgContainer.style.transform = `translateY(-${perspectiveFactor * window.scrollY}px)`;
-}
+requestAnimationFrame(animation);
