@@ -7,6 +7,7 @@ body {
     font-optical-sizing: auto;
 }
 .title-container {
+    margin: auto;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -15,20 +16,23 @@ body {
 }
 .title-group {
     display: flex;
+    width: calc(100% - 40px);
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
 }
 .title-container h1 {
+    font-size: 1.7rem;
     font-weight: 300;
     letter-spacing: 0.5rem;
     margin: 20px 0 5px;
+    text-align: center;
 }
 .title-container h1 > b {
     font-weight: 800;
 }
 .title-container h3 {
-    font-weight: lighter;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
     letter-spacing: 0.25ch;
     margin: 5px 0 20px;
 }
@@ -96,10 +100,24 @@ body {
 
 .typewriter {
     text-wrap: nowrap;
+    font-family: "Noto Sans Mono", monospace;
+    font-optical-sizing: auto;
     width: 1ch;
+    font-weight: 300;
     overflow: hidden;
-    animation: 10s typewriter steps(25, jump-none) infinite,
+    animation: 10s typewriter steps(32, jump-none) infinite,
                1s cursor infinite;
+}
+@media screen and (min-width: 800px) {
+    .title-container h1 {
+        font-size: 2rem;
+    }
+    .title-container h3{
+        font-size: 1rem;
+    }
+}
+.typewriter b {
+    font-weight: 600;
 }
 
 @keyframes typewriter {
@@ -107,7 +125,7 @@ body {
         width: 0;
     }
     25%, 90% {
-        width: 30ch;
+        width: 39ch;
     }
     100% {
         width: 0;
@@ -129,5 +147,63 @@ body {
     }
     50% {
         transform: translateY(5px);
+    }
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+#subdivisions .grid-container {
+    margin-top: 40px;
+}
+#subdivisions .grid-container .card {
+    text-decoration: none;
+    color: unset;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 200ms ease-out;
+}
+#subdivisions .grid-container .card:hover {
+    transform: scale(1.02);
+}
+#subdivisions .grid-container .card h3 {
+    font-weight: normal;
+    margin-top: 0;
+}
+#subdivisions .grid-container .card p {
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 0;
+}
+
+#subdivisions .grid-container .card .content {
+    width: calc(100% - 40px);
+}
+
+#subdivisions .grid-container .card:nth-child(1) {
+    background-color: rgba(245, 247, 252, 0.8);
+}
+#subdivisions .grid-container .card:nth-child(2) {
+    background-color: rgba(229, 247, 236, 0.8);
+}
+#subdivisions .grid-container .card:nth-child(3) {
+    background-color: rgba(249, 240, 246, 0.8);
+}
+
+#subdivisions .grid-container .card .top-image {
+    background-size: cover;
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 800px) {
+    .grid-container  {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }

@@ -19,7 +19,6 @@ function animation(time) {
 }
 
 window.onload = () => {
-    console.log("Hello!")
     for (let i = 0; i < 3; i++) {
         balls[i].style.left = `${pos[i][0]}vw`;
         balls[i].style.top = `${pos[i][1]}vh`;
