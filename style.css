@@ -5,6 +5,7 @@ body {
     margin: 0;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
+    color:rgb(38, 41, 48);
 }
 .title-container {
     margin: auto;
@@ -63,12 +64,16 @@ body {
     /* background-image: radial-gradient( circle 50vw at 8.6% 27.9%,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% ); */
 }
 .page {
-    padding: 30px 12px;
+    padding: 40px 12px 0;
 }
 .page.opaque {
     background-color: rgba(235, 247, 255, 0.8);
     /* box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04); */
     backdrop-filter: blur(20px);
+    padding: 30px 12px;
+}
+.page.opaque + .page~.opaque {
+
 }
 .content {
     margin: 40px auto;
@@ -167,10 +172,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 200ms ease-out;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.04);
+    transition: box-shadow 200ms ease-out, border 200ms ease-out, transform 200ms ease-out;
 }
 #subdivisions .grid-container .card:hover {
-    transform: scale(1.02);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.08),
+                0 4px 28px -4px rgba(0, 0, 0, 0.04);
+}
+#subdivisions .grid-container .card:hover .top-image {
+    width: 110%;
 }
 #subdivisions .grid-container .card h3 {
     font-weight: normal;
@@ -181,8 +192,9 @@ body {
     margin-bottom: 0;
 }
 
-#subdivisions .grid-container .card .content {
-    width: calc(100% - 40px);
+#subdivisions .grid-container .card .card-content {
+    width: calc(100% - 50px);
+    margin: 40px 0;
 }
 
 #subdivisions .grid-container .card:nth-child(1) {
@@ -200,10 +212,72 @@ body {
     width: 100%;
     max-height: 300px;
     object-fit: cover;
+    transition: width 600ms ease-out;
 }
 
 @media screen and (min-width: 800px) {
-    .grid-container  {
+    #subdivisions .grid-container  {
         grid-template-columns: 1fr 1fr 1fr;
     }
+}
+
+@media screen and (min-width: 640px) {
+    .people-page .grid-container  {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 800px) {
+    .people-page .grid-container  {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+.people {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+}
+.people-page {
+    margin: 0 auto;
+}
+.people-page .grid-container {
+    margin: 40px auto 0;
+    width: 80%;
+}
+.people .avatar {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 200px;
+}
+.people h3 {
+    margin-bottom: 0;
+}
+.people h4 {
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+.people h4 + h4 {
+    margin-top: 0;
+}
+
+.people:nth-child(1) .avatar {
+    object-position: 50% 50%;
+}
+.people:nth-child(2) .avatar {
+    object-position: 50% 5%;
+}
+.people:nth-child(3) .avatar {
+    object-position: 50% 30%;
+}
+.people:nth-child(4) .avatar {
+    object-position: 50% 10%;
+}
+.people:nth-child(5) .avatar {
+    object-position: 50% 50%;
+}
+.people:nth-child(6) .avatar {
+    object-position: 50% 0%;
 }
