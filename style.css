@@ -77,7 +77,7 @@ body {
 }
 .content {
     margin: 40px auto;
-    max-width: 1024px;
+    max-width: 1280px;
 }
 .content h2 {
     text-transform: uppercase;
@@ -163,6 +163,8 @@ body {
 
 #subdivisions .grid-container {
     margin-top: 40px;
+    width: calc(100% - 20px);
+    margin: 40px auto 0;
 }
 #subdivisions .grid-container .card {
     text-decoration: none;
@@ -210,17 +212,27 @@ body {
 #subdivisions .grid-container .card .top-image {
     background-size: cover;
     width: 100%;
-    max-height: 300px;
+    height: 300px;
     object-fit: cover;
     transition: width 600ms ease-out;
 }
 
+@media screen and (min-width: 640px) {
+    #subdivisions .grid-container  {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 @media screen and (min-width: 800px) {
     #subdivisions .grid-container  {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
-
+@media screen and (min-width: 1280px) {
+    #subdivisions .grid-container  {
+        width: 80%;
+        margin: 40px auto;
+    }
+}
 @media screen and (min-width: 640px) {
     .people-page .grid-container  {
         grid-template-columns: 1fr 1fr;
@@ -229,6 +241,11 @@ body {
 @media screen and (min-width: 800px) {
     .people-page .grid-container  {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .people-page .grid-container  {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 .people {
@@ -280,4 +297,11 @@ body {
 }
 .people:nth-child(6) .avatar {
     object-position: 50% 0%;
+}
+.copyright {
+    font-size: 0.8rem;
+    color:rgb(151, 158, 177);
+}
+.page.copyright .content{
+    margin: 10px auto;
 }
