@@ -72,9 +72,6 @@ body {
     backdrop-filter: blur(20px);
     padding: 30px 12px;
 }
-.page.opaque + .page~.opaque {
-
-}
 .content {
     margin: 40px auto;
     max-width: 1280px;
