@@ -154,7 +154,7 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    column-gap: 20px;
+    column-gap: 20px;	
     row-gap: 20px;
 }
 
@@ -205,6 +205,9 @@ body {
 #subdivisions .grid-container .card:nth-child(3) {
     background-color: rgba(249, 240, 246, 0.8);
 }
+#subdivisions .grid-container .card:nth-child(4) {
+    background-color: rgba(232, 240, 246, 0.8);
+}
 
 #subdivisions .grid-container .card .top-image {
     background-size: cover;
@@ -230,6 +233,13 @@ body {
         margin: 40px auto;
     }
 }
+@media screen and (min-width: 1800px) {
+    #subdivisions .grid-container  {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+		width: 80%;
+        margin: 40px auto;
+    }
+}
 @media screen and (min-width: 640px) {
     .people-page .grid-container  {
         grid-template-columns: 1fr 1fr;
@@ -245,6 +255,14 @@ body {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+@media screen and (min-width: 1680px) {
+    .people-page .grid-container  {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		width: 80%; /* 适当增加容器宽度 */
+        max-width: 1440px; /* 控制最大宽度 */
+	}
+}
+
 .people {
     display: flex;
     flex-direction: column;
@@ -271,6 +289,7 @@ a {
 }
 .people h3 {
     margin-bottom: 0;
+	font-size: 1.1rem;
 }
 .people h4 {
     font-weight: 400;
