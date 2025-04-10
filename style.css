@@ -229,15 +229,8 @@ body {
 }
 @media screen and (min-width: 1280px) {
     #subdivisions .grid-container  {
-        width: 80%;
-        margin: 40px auto;
-    }
-}
-@media screen and (min-width: 1800px) {
-    #subdivisions .grid-container  {
+        width: 90%;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-		width: 80%;
-        margin: 40px auto;
     }
 }
 @media screen and (min-width: 640px) {
@@ -252,15 +245,8 @@ body {
 }
 @media screen and (min-width: 1280px) {
     .people-page .grid-container  {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-}
-@media screen and (min-width: 1680px) {
-    .people-page .grid-container  {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-		width: 80%; /* 适当增加容器宽度 */
-        max-width: 1440px; /* 控制最大宽度 */
-	}
+    }
 }
 
 .people {
@@ -279,7 +265,7 @@ a {
 }
 .people-page .grid-container {
     margin: 40px auto 0;
-    width: 80%;
+    width: 90%;
 }
 .people .avatar {
     width: 100px;
@@ -314,7 +300,7 @@ a {
     object-position: 50% 10%;
 }
 .people:nth-child(5) .avatar {
-    object-position: 50% 50%;
+    object-position: 50% 30%;
 }
 .people:nth-child(6) .avatar {
     object-position: 50% 0%;
@@ -338,7 +324,7 @@ a {
 }
 @media screen and (min-width: 1280px) {
     .joinus-pdf {
-        width: 80%;
+        width: 90%;
     }
     
 }
