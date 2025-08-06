@@ -25,12 +25,21 @@ body {
 .title-container h1 {
     font-size: 1.7rem;
     font-weight: 300;
-    letter-spacing: 0.5rem;
     margin: 20px 0 5px;
     text-align: center;
 }
-.title-container h1 > b {
+.title-container h1:lang(zh) {
+    letter-spacing: 0.5rem;
+}
+.title-container h1:lang(en) {
+    letter-spacing: 0.05rem;
+    font-weight: 200;
+}
+.title-container h1 > b:lang(zh) {
     font-weight: 800;
+}
+.title-container h1 > b:lang(en) {
+    font-weight: 600;
 }
 .title-container h3 {
     font-size: 0.8rem;
@@ -195,6 +204,14 @@ body {
     width: calc(100% - 50px);
     margin: 40px 0;
 }
+#subdivisions .grid-container .card .card-content:lang(en) {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+#subdivisions .grid-container .card .card-content:lang(en) h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
 
 #subdivisions .grid-container .card:nth-child(1) {
     background-color: rgba(245, 247, 252, 0.8);
@@ -277,11 +294,17 @@ a {
     margin-bottom: 0;
 	font-size: 1.1rem;
 }
+
 .people h4 {
+    text-align: center;
     font-weight: 400;
     font-size: 1rem;
     margin-top: 8px;
     margin-bottom: 0;
+}
+.people h4:lang(en) {
+    font-size: 0.9rem;
+    font-weight: 400;
 }
 .people h4 + h4 {
     margin-top: 0;
@@ -303,6 +326,9 @@ a {
     object-position: 50% 30%;
 }
 .people:nth-child(6) .avatar {
+    object-position: 50% 40%;
+}
+.people:nth-child(7) .avatar {
     object-position: 50% 0%;
 }
 .copyright {
