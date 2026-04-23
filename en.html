@@ -11,9 +11,7 @@
 </head>
 <body>
     <div id="bg-container">
-        <div class="bg-ball" id="ball-1"></div>
-        <div class="bg-ball" id="ball-2"></div>
-        <div class="bg-ball" id="ball-3"></div>
+        <canvas id="bg-network" aria-hidden="true"></canvas>
     </div>
     <div class="title-container">
         <div class="header">
@@ -32,7 +30,7 @@
         </a>
     </div>
 
-    <div class="page opaque">
+    <div class="page opaque intro-page">
         <div id="about" class="content about">
             <h2>About</h2>
             <p><span>The Advanced NeTwork System Group (ANTS) at Xi'an Jiaotong University focuses on research to ensure network reliability, enhance network flexibility, and improve network transmission performance, centering around future internet, AI infra network, and explanable AI. Through collaboration with major domestic and international network vendors, the group aims to implement and transform research results in real-world scenarios, publish influential academic papers, and cultivate top talents in the field of networks and systems.</span></p>
@@ -40,7 +38,7 @@
         </div>
     </div>
 
-    <div class="page">
+    <div class="page people-section">
         <div class="content people-page">
             <h2>People</h2>
             <div class="grid-container">
@@ -91,37 +89,37 @@
             </div>
         </div>
     </div>
-    <div class="page">
+    <div class="page research-page">
         <div id="subdivisions" class="content">
             <h2>Research</h2>
-            <p>The group currently has four research directions: <a href="https://xjtu-netverify.github.io">Network Verification</a>, Programmable Networks, Transmission Performance Optimization, and Explainable AI. Click the icons for detailed introductions.</p>
+            <p class="section-intro">The group currently has four research directions: <a href="https://xjtu-netverify.github.io">Network Verification</a>, Programmable Networks, Transmission Performance Optimization, and Explainable AI. Click the icons for detailed introductions.</p>
             <div class="grid-container">
 
                 <a class="card" href="https://xjtu-netverify.github.io">
-                    <img class="top-image" src="assets/netverify.jpg" alt="netverify">
+                    <img class="top-image" src="assets/netverify.png" alt="netverify">
                     <div class="card-content">
                         <h3>Net<b>Verify</b><br/>Network Verification</h3>
                         <p>As network scale and complexity increase, especially with the emergence of large-scale training clusters, traditional network operations relying on manual experience are no longer suitable. Network verification technology formalizes and accurately simulates network topology, configuration, and traffic states, enabling automated generation, verification, and repair of networks to ensure reliability. Network verification has become an indispensable key technology for major cloud providers, operators, and internet companies, with significant research and application value.</p>
                     </div>
                 </a>
                 <a class="card">
-                    <img class="top-image" src="assets/netfun.jpg" alt="netfun">
+                    <img class="top-image" src="assets/netfun.png" alt="netfun">
                     <div class="card-content">
                         <h3>Net<b>Fun</b><br/>Programmable Networks</h3>
                         <p>Programmable networks leverage technologies such as Software-Defined Networking (SDN) for flexible programming control over network behavior, dynamically adjusting network resources and policies to effectively enhance network agility and accelerate the evolution of network architecture.</p>
                     </div>
                 </a>
                 <a class="card">
-                    <img class="top-image" src="assets/netperf.jpg" alt="netperf">
+                    <img class="top-image" src="assets/netperf.png" alt="netperf">
                     <div class="card-content">
                         <h3>Net<b>Perf</b><br/>Transmission Performance Optimization</h3>
                         <p>Network transmission performance optimization aims to reduce latency, improve bandwidth utilization, and enhance data transmission efficiency. By employing techniques such as traffic management, transmission control, and intelligent scheduling, it minimizes congestion and data loss, thereby boosting network stability and responsiveness. Research in this area contributes to the development of high-performance networks that meet the demands for high-speed communication in modern applications.</p>
                     </div>
                 </a>
-				<a class="card">
-                    <img class="top-image" src="assets/xai.png" alt="xai">
+                <a class="card">
+                    <img class="top-image" src="assets/netxai.png" alt="xai">
                     <div class="card-content">
-                        <h3>X<b>AI</b><br/>Explainable AI</h3>
+                        <h3>NetX<b>AI</b><br/>Explainable AI</h3>
                         <p>The core goal of Explainable AI is to enhance the transparency and trustworthiness of AI systems. Through innovative techniques such as visual analytics, feature attribution, and decision path tracing, it deeply analyzes the reasoning mechanisms of models, effectively addressing the traditional "black box" problem of AI. This research is of key significance in high-value application scenarios such as medical diagnosis, financial risk control, and autonomous driving, ensuring that AI decision-making processes meet fairness, compliance, and traceability requirements.</p>
                     </div>
                 </a>
@@ -129,7 +127,7 @@
             </div>
         </div>
     </div>
-    <div class="page">
+    <div class="page join-page">
         <div id="joinus" class="content">
             <h2>Join Us</h2>
             <p>Contact: <a href="mailto:p-zhang@xjtu.edu.cn">p-zhang@xjtu.edu.cn</a></p>
